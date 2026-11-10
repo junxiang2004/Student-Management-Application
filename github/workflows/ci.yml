@@ -1,5 +1,5 @@
 
-name: StudentHub Flutter CI
+name: Std_Management Flutter CI
 
 on:
   push:
