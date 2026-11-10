@@ -1,0 +1,34 @@
+
+name: StudentHub Flutter CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  flutter-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Check Dart Formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: Flutter Code Analysis
+        run: flutter analyze
+
+      - name: Run Flutter Tests
+        run: flutter test
