@@ -1,30 +1,90 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:std_management_system/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  // Test 1: Check Home Page
+  testWidgets('StudentHub home page displays correctly', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const StudentHubApp());
+    await tester.pumpAndSettle();
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('Welcome to StudentHub!'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    expect(find.text('Total Students'), findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('Total Programmes'), findsOneWidget);
+
+    expect(find.byType(NavigationBar), findsOneWidget);
+  });
+
+  // Test 2: Check Bottom Navigation
+  testWidgets('Bottom navigation switches to Students', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const StudentHubApp());
+    await tester.pumpAndSettle();
+
+    // Find Students button inside NavigationBar
+    final studentsButton = find.descendant(
+      of: find.byType(NavigationBar),
+      matching: find.text('Students'),
+    );
+
+    // Tap Students button
+    await tester.tap(studentsButton);
+    await tester.pumpAndSettle();
+
+    // Check selected navigation index
+    final navigationBar = tester.widget<NavigationBar>(
+      find.byType(NavigationBar),
+    );
+
+    expect(navigationBar.selectedIndex, 1);
+  });
+
+  // Test 3: Check Records Navigation
+  testWidgets('Bottom navigation switches to Records', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const StudentHubApp());
+    await tester.pumpAndSettle();
+
+    final recordsButton = find.descendant(
+      of: find.byType(NavigationBar),
+      matching: find.text('Records'),
+    );
+
+    await tester.tap(recordsButton);
+    await tester.pumpAndSettle();
+
+    final navigationBar = tester.widget<NavigationBar>(
+      find.byType(NavigationBar),
+    );
+
+    expect(navigationBar.selectedIndex, 2);
+  });
+
+  // Test 4: Check Programmes Navigation
+  testWidgets('Bottom navigation switches to Programmes', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const StudentHubApp());
+    await tester.pumpAndSettle();
+
+    final programmesButton = find.descendant(
+      of: find.byType(NavigationBar),
+      matching: find.text('Programmes'),
+    );
+
+    await tester.tap(programmesButton);
+    await tester.pumpAndSettle();
+
+    final navigationBar = tester.widget<NavigationBar>(
+      find.byType(NavigationBar),
+    );
+
+    expect(navigationBar.selectedIndex, 3);
   });
 }
