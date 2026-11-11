@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class Student {
   final int id;
   final String name;
