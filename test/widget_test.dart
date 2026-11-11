@@ -5,36 +5,24 @@ import 'package:std_management_system/main.dart';
 void main() {
   // Test 1: Check Home Page
   testWidgets('StudentHub home page displays correctly', (
-      WidgetTester tester,
-      ) async {
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const StudentHubApp());
     await tester.pumpAndSettle();
 
-    expect(
-      find.text('Welcome to StudentHub!'),
-      findsOneWidget,
-    );
+    expect(find.text('Welcome to StudentHub!'), findsOneWidget);
 
-    expect(
-      find.text('Total Students'),
-      findsOneWidget,
-    );
+    expect(find.text('Total Students'), findsOneWidget);
 
-    expect(
-      find.text('Total Programmes'),
-      findsOneWidget,
-    );
+    expect(find.text('Total Programmes'), findsOneWidget);
 
-    expect(
-      find.byType(NavigationBar),
-      findsOneWidget,
-    );
+    expect(find.byType(NavigationBar), findsOneWidget);
   });
 
   // Test 2: Check Bottom Navigation
   testWidgets('Bottom navigation switches to Students', (
-      WidgetTester tester,
-      ) async {
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const StudentHubApp());
     await tester.pumpAndSettle();
 
@@ -58,8 +46,8 @@ void main() {
 
   // Test 3: Check Records Navigation
   testWidgets('Bottom navigation switches to Records', (
-      WidgetTester tester,
-      ) async {
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const StudentHubApp());
     await tester.pumpAndSettle();
 
@@ -80,8 +68,8 @@ void main() {
 
   // Test 4: Check Programmes Navigation
   testWidgets('Bottom navigation switches to Programmes', (
-      WidgetTester tester,
-      ) async {
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const StudentHubApp());
     await tester.pumpAndSettle();
 
