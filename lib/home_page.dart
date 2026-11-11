@@ -12,10 +12,7 @@ class HomePage extends StatelessWidget {
         children: const [
           Text(
             'Welcome to StudentHub!',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
 
           SizedBox(height: 10),
@@ -29,10 +26,7 @@ class HomePage extends StatelessWidget {
 
           Text(
             'Student Summary',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
 
           SizedBox(height: 15),
