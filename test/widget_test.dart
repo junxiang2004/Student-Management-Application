@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import '../lib/main.dart';
+import 'package:std_management_system/main.dart';
 
 void main() {
   testWidgets('StudentHub home page displays correctly', (
