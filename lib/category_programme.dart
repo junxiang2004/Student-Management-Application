@@ -12,26 +12,22 @@ class CategoryProgrammePage extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Column(
-        children: <Widget>[
-          Container(
-            child: TabBar(
-              labelColor: Colors.black,
-              tabs: [
-                Tab(text: "Computer"),
-                Tab(text: "Business"),
-                Tab(text: "Engineer"),
-              ],
-            ),
+        children: [
+          TabBar(
+            labelColor: Colors.black,
+            tabs: [
+              Tab(text: "Computer"),
+              Tab(text: "Business"),
+              Tab(text: "Engineer"),
+            ],
           ),
           Expanded(
-            child: Container(
-              child: TabBarView(
-                children: [
-                  Container(child: Computer()),
-                  Container(child: Business()),
-                  Container(child: Engineer()),
-                ],
-              ),
+            child: TabBarView(
+              children: [
+                Computer(),
+                Business(),
+                Engineer()
+              ],
             ),
           ),
         ],
