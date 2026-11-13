@@ -22,13 +22,7 @@ class CategoryProgrammePage extends StatelessWidget {
             ],
           ),
           Expanded(
-            child: TabBarView(
-              children: [
-                Computer(),
-                Business(),
-                Engineer()
-              ],
-            ),
+            child: TabBarView(children: [Computer(), Business(), Engineer()]),
           ),
         ],
       ),
