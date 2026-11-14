@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../home_page.dart';
-import '../category_programme.dart';
 import 'app_drawer.dart';
 import 'navigation_provider.dart';
 
@@ -19,7 +18,7 @@ class MainNavigation extends StatelessWidget {
       HomePage(),
       Center(child: Text('')),
       Center(child: Text('')),
-      CategoryProgrammePage(),
+      Center(child: Text('')),
     ];
 
     return Scaffold(
