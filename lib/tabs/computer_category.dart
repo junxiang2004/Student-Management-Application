@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../student_data.dart';
 
 class Computer extends StatelessWidget {
+  const Computer({super.key});
+
   @override
   Widget build(BuildContext context) {
     final computerStudents = students
