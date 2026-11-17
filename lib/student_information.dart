@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../student_data.dart';
 
 class StudentInformation extends StatelessWidget {
@@ -88,7 +89,10 @@ class StudentDetailsPage extends StatelessWidget {
             Center(
               child: Text(
                 student.name,
-                style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             Center(
@@ -100,13 +104,17 @@ class StudentDetailsPage extends StatelessWidget {
             const Divider(height: 32, thickness: 1),
             _buildDetailCard("Programme", student.programme, Icons.school),
             _buildDetailCard("Age", student.age.toString(), Icons.cake),
-            _buildDetailCard("CGPA", student.cgpa.toStringAsFixed(2), Icons.grade),
+            _buildDetailCard(
+              "CGPA",
+              student.cgpa.toStringAsFixed(2),
+              Icons.grade,
+            ),
           ],
         ),
       ),
     );
   }
-  
+
   Widget _buildDetailCard(String label, String value, IconData icon) {
     return Card(
       elevation: 1,
