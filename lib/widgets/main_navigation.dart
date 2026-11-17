@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../home_page.dart';
 import '../category_programme.dart';
+import '../student_information.dart';
 import '../student_record_page.dart';
 import 'app_drawer.dart';
 import 'navigation_provider.dart';
@@ -19,7 +20,7 @@ class MainNavigation extends StatelessWidget {
 
     const pages = [
       HomePage(),
-      Center(child: Text('')),
+      StudentInformation(),
       StudentRecordPage(),
       CategoryProgrammePage(),
 
