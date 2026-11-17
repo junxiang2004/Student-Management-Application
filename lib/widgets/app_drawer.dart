@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,16 +14,12 @@ class AppDrawer extends StatelessWidget {
     if (index == 4) {
       Navigator.push<void>(
         context,
-        MaterialPageRoute<void>(
-          builder: (context) => const ProfilePage(),
-        ),
+        MaterialPageRoute<void>(builder: (context) => const ProfilePage()),
       );
     } else if (index == 5) {
       Navigator.push<void>(
         context,
-        MaterialPageRoute<void>(
-          builder: (context) => const AboutPage(),
-        ),
+        MaterialPageRoute<void>(builder: (context) => const AboutPage()),
       );
     } else {
       context.read<NavigationProvider>().changePage(index);
@@ -39,17 +33,11 @@ class AppDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.indigo,
-            ),
+            decoration: BoxDecoration(color: Colors.indigo),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(
-                  Icons.school,
-                  size: 50,
-                  color: Colors.white,
-                ),
+                Icon(Icons.school, size: 50, color: Colors.white),
 
                 SizedBox(height: 15),
 
@@ -107,4 +95,3 @@ class AppDrawer extends StatelessWidget {
     );
   }
 }
-

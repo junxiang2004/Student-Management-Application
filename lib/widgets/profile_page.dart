@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -25,10 +24,7 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(25),
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [
-                    Colors.indigo,
-                    Colors.blueAccent,
-                  ],
+                  colors: [Colors.indigo, Colors.blueAccent],
                 ),
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -37,11 +33,7 @@ class ProfilePage extends StatelessWidget {
                   const CircleAvatar(
                     radius: 45,
                     backgroundColor: Colors.white,
-                    child: Icon(
-                      Icons.person,
-                      size: 55,
-                      color: Colors.indigo,
-                    ),
+                    child: Icon(Icons.person, size: 55, color: Colors.indigo),
                   ),
 
                   const SizedBox(height: 15),
@@ -59,9 +51,7 @@ class ProfilePage extends StatelessWidget {
 
                   const Text(
                     'StudentHub Developer',
-                    style: TextStyle(
-                      color: Colors.white70,
-                    ),
+                    style: TextStyle(color: Colors.white70),
                   ),
                 ],
               ),
@@ -101,17 +91,13 @@ class ProfilePage extends StatelessWidget {
                     const ListTile(
                       leading: Icon(Icons.school),
                       title: Text('Programme'),
-                      subtitle: SelectableText(
-                        'Your Programme',
-                      ),
+                      subtitle: SelectableText('Your Programme'),
                     ),
 
                     const ListTile(
                       leading: Icon(Icons.email),
                       title: Text('Email Address'),
-                      subtitle: SelectableText(
-                        'your@email.com',
-                      ),
+                      subtitle: SelectableText('your@email.com'),
                     ),
                   ],
                 ),

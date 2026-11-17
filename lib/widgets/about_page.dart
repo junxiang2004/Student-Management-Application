@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -36,11 +34,7 @@ class AboutPage extends StatelessWidget {
             // Application Logo
             const SizedBox(height: 20),
 
-            const Icon(
-              Icons.school,
-              size: 85,
-              color: Colors.indigo,
-            ),
+            const Icon(Icons.school, size: 85, color: Colors.indigo),
 
             const SizedBox(height: 15),
 
@@ -58,9 +52,7 @@ class AboutPage extends StatelessWidget {
             const Center(
               child: Text(
                 'Student Management Application',
-                style: TextStyle(
-                  color: Colors.grey,
-                ),
+                style: TextStyle(color: Colors.grey),
               ),
             ),
 
@@ -87,12 +79,10 @@ class AboutPage extends StatelessWidget {
 
                     const Text(
                       'StudentHub is a Student Management '
-                          'Application designed to help users '
-                          'manage and organise student information '
-                          'and academic records efficiently.',
-                      style: TextStyle(
-                        fontSize: 15,
-                      ),
+                      'Application designed to help users '
+                      'manage and organise student information '
+                      'and academic records efficiently.',
+                      style: TextStyle(fontSize: 15),
                     ),
                   ],
                 ),
@@ -122,23 +112,13 @@ class AboutPage extends StatelessWidget {
 
                     // Student Information
                     ListTile(
-                      leading: const Icon(
-                        Icons.people,
-                        color: Colors.indigo,
-                      ),
+                      leading: const Icon(Icons.people, color: Colors.indigo),
 
-                      title: const Text(
-                        'Student Information',
-                      ),
+                      title: const Text('Student Information'),
 
-                      subtitle: const Text(
-                        'View and manage student details.',
-                      ),
+                      subtitle: const Text('View and manage student details.'),
 
-                      trailing: const Icon(
-                        Icons.arrow_forward_ios,
-                        size: 16,
-                      ),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
 
                       onTap: () {
                         _openSection(context, 1);
@@ -152,18 +132,13 @@ class AboutPage extends StatelessWidget {
                         color: Colors.indigo,
                       ),
 
-                      title: const Text(
-                        'Student Records',
-                      ),
+                      title: const Text('Student Records'),
 
                       subtitle: const Text(
                         'View and organise student records.',
                       ),
 
-                      trailing: const Icon(
-                        Icons.arrow_forward_ios,
-                        size: 16,
-                      ),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
 
                       onTap: () {
                         _openSection(context, 2);
@@ -172,23 +147,15 @@ class AboutPage extends StatelessWidget {
 
                     // Programmes
                     ListTile(
-                      leading: const Icon(
-                        Icons.school,
-                        color: Colors.indigo,
-                      ),
+                      leading: const Icon(Icons.school, color: Colors.indigo),
 
-                      title: const Text(
-                        'Programmes',
-                      ),
+                      title: const Text('Programmes'),
 
                       subtitle: const Text(
                         'Browse different academic programmes.',
                       ),
 
-                      trailing: const Icon(
-                        Icons.arrow_forward_ios,
-                        size: 16,
-                      ),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
 
                       onTap: () {
                         _openSection(context, 3);
@@ -230,9 +197,7 @@ class AboutPage extends StatelessWidget {
 
                     title: Text('Course'),
 
-                    subtitle: Text(
-                      'TMA3084 - Software Engineering Laboratory',
-                    ),
+                    subtitle: Text('TMA3084 - Software Engineering Laboratory'),
                   ),
                 ],
               ),
@@ -244,9 +209,7 @@ class AboutPage extends StatelessWidget {
             const Center(
               child: Text(
                 '© 2026 StudentHub. All Rights Reserved.',
-                style: TextStyle(
-                  color: Colors.grey,
-                ),
+                style: TextStyle(color: Colors.grey),
               ),
             ),
 

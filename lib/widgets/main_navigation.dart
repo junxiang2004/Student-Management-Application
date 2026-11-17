@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,7 +13,7 @@ class MainNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currentIndex = context.select<NavigationProvider, int>(
-          (provider) => provider.currentIndex,
+      (provider) => provider.currentIndex,
     );
 
     const pages = [
@@ -46,25 +45,16 @@ class MainNavigation extends StatelessWidget {
         },
 
         destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
+          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
 
-          NavigationDestination(
-            icon: Icon(Icons.people),
-            label: 'Students',
-          ),
+          NavigationDestination(icon: Icon(Icons.people), label: 'Students'),
 
           NavigationDestination(
             icon: Icon(Icons.table_chart),
             label: 'Records',
           ),
 
-          NavigationDestination(
-            icon: Icon(Icons.school),
-            label: 'Programmes',
-          ),
+          NavigationDestination(icon: Icon(Icons.school), label: 'Programmes'),
         ],
       ),
     );

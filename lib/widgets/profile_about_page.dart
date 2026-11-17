@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class ProfileAboutPage extends StatelessWidget {
@@ -10,9 +9,7 @@ class ProfileAboutPage extends StatelessWidget {
     final colors = theme.colorScheme;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile & About'),
-      ),
+      appBar: AppBar(title: const Text('Profile & About')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -28,23 +25,17 @@ class ProfileAboutPage extends StatelessWidget {
                     padding: const EdgeInsets.all(22),
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
-                        colors: [
-                          colors.primary,
-                          colors.tertiary,
-                        ],
+                        colors: [colors.primary, colors.tertiary],
                       ),
                       borderRadius: BorderRadius.circular(24),
                     ),
                     child: Column(
-                      crossAxisAlignment:
-                      CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           'My Profile',
-                          style: TextStyle(
-                            color: colors.onPrimary,
-                          ),
+                          style: TextStyle(color: colors.onPrimary),
                         ),
                         const SizedBox(height: 8),
                         Text(
@@ -57,9 +48,7 @@ class ProfileAboutPage extends StatelessWidget {
                         ),
                         Text(
                           'StudentHub Developer',
-                          style: TextStyle(
-                            color: colors.onPrimary,
-                          ),
+                          style: TextStyle(color: colors.onPrimary),
                         ),
                       ],
                     ),
@@ -84,8 +73,7 @@ class ProfileAboutPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
-                  crossAxisAlignment:
-                  CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
                       'Developer Information',
@@ -128,8 +116,7 @@ class ProfileAboutPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
-                  crossAxisAlignment:
-                  CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
                       'About StudentHub',
@@ -141,16 +128,14 @@ class ProfileAboutPage extends StatelessWidget {
                     const SizedBox(height: 12),
                     const Text(
                       'StudentHub is a Student Management '
-                          'Application designed to help users '
-                          'manage and organise student information '
-                          'and academic records efficiently.',
+                      'Application designed to help users '
+                      'manage and organise student information '
+                      'and academic records efficiently.',
                     ),
                     const SizedBox(height: 16),
                     const Text(
                       'Application Features',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     const Wrap(
                       spacing: 8,
@@ -188,9 +173,7 @@ class ProfileAboutPage extends StatelessWidget {
                   ListTile(
                     leading: Icon(Icons.book),
                     title: Text('Course'),
-                    subtitle: Text(
-                      'TMA3084 - Software Engineering Laboratory',
-                    ),
+                    subtitle: Text('TMA3084 - Software Engineering Laboratory'),
                   ),
                 ],
               ),
@@ -199,9 +182,7 @@ class ProfileAboutPage extends StatelessWidget {
             const SizedBox(height: 20),
 
             const Center(
-              child: Text(
-                '© 2026 StudentHub. All Rights Reserved.',
-              ),
+              child: Text('© 2026 StudentHub. All Rights Reserved.'),
             ),
           ],
         ),
@@ -228,12 +209,7 @@ class ProfileInfoTile extends StatelessWidget {
     return ListTile(
       contentPadding: EdgeInsets.zero,
       leading: Icon(icon),
-      title: Text(
-        label,
-        style: const TextStyle(
-          fontWeight: FontWeight.w600,
-        ),
-      ),
+      title: Text(label, style: const TextStyle(fontWeight: FontWeight.w600)),
       subtitle: SelectableText(value),
     );
   }
