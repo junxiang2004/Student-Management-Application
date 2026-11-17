@@ -1,7 +1,11 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'navigation_provider.dart';
+import 'profile_page.dart';
+import 'about_page.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -10,13 +14,17 @@ class AppDrawer extends StatelessWidget {
     Navigator.pop(context);
 
     if (index == 4) {
-      Navigator.push(
+      Navigator.push<void>(
         context,
         MaterialPageRoute<void>(
-          builder: (context) => Scaffold(
-            appBar: AppBar(title: const Text('About')),
-            body: const Center(child: Text('')),
-          ),
+          builder: (context) => const ProfilePage(),
+        ),
+      );
+    } else if (index == 5) {
+      Navigator.push<void>(
+        context,
+        MaterialPageRoute<void>(
+          builder: (context) => const AboutPage(),
         ),
       );
     } else {
@@ -31,12 +39,20 @@ class AppDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
-            decoration: BoxDecoration(color: Colors.indigo),
+            decoration: BoxDecoration(
+              color: Colors.indigo,
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(Icons.school, size: 50, color: Colors.white),
+                Icon(
+                  Icons.school,
+                  size: 50,
+                  color: Colors.white,
+                ),
+
                 SizedBox(height: 15),
+
                 Text(
                   'StudentHub',
                   style: TextStyle(
@@ -76,12 +92,19 @@ class AppDrawer extends StatelessWidget {
           const Divider(),
 
           ListTile(
+            leading: const Icon(Icons.person),
+            title: const Text('Profile'),
+            onTap: () => _selectPage(context, 4),
+          ),
+
+          ListTile(
             leading: const Icon(Icons.info),
             title: const Text('About'),
-            onTap: () => _selectPage(context, 4),
+            onTap: () => _selectPage(context, 5),
           ),
         ],
       ),
     );
   }
 }
+

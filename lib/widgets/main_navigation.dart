@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -5,6 +6,7 @@ import '../home_page.dart';
 import '../category_programme.dart';
 import 'app_drawer.dart';
 import 'navigation_provider.dart';
+import 'profile_about_page.dart'; // Added Profile Page
 
 class MainNavigation extends StatelessWidget {
   const MainNavigation({super.key});
@@ -12,7 +14,7 @@ class MainNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currentIndex = context.select<NavigationProvider, int>(
-      (provider) => provider.currentIndex,
+          (provider) => provider.currentIndex,
     );
 
     const pages = [
@@ -20,6 +22,9 @@ class MainNavigation extends StatelessWidget {
       Center(child: Text('')),
       Center(child: Text('')),
       CategoryProgrammePage(),
+
+      // Profile / About Page
+      ProfileAboutPage(),
     ];
 
     return Scaffold(
@@ -34,23 +39,32 @@ class MainNavigation extends StatelessWidget {
       body: pages[currentIndex],
 
       bottomNavigationBar: NavigationBar(
-        selectedIndex: currentIndex,
+        selectedIndex: currentIndex < 4 ? currentIndex : 0,
 
         onDestinationSelected: (index) {
           context.read<NavigationProvider>().changePage(index);
         },
 
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
 
-          NavigationDestination(icon: Icon(Icons.people), label: 'Students'),
+          NavigationDestination(
+            icon: Icon(Icons.people),
+            label: 'Students',
+          ),
 
           NavigationDestination(
             icon: Icon(Icons.table_chart),
             label: 'Records',
           ),
 
-          NavigationDestination(icon: Icon(Icons.school), label: 'Programmes'),
+          NavigationDestination(
+            icon: Icon(Icons.school),
+            label: 'Programmes',
+          ),
         ],
       ),
     );
