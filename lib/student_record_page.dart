@@ -58,7 +58,7 @@ class _StudentRecordPageState extends State<StudentRecordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Student Records')),
+      appBar: AppBar(title: const Text('Student Records ')),
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: SingleChildScrollView(
