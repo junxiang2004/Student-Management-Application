@@ -5,15 +5,12 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Profile'),
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
       ),
-
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -35,9 +32,7 @@ class ProfilePage extends StatelessWidget {
                     backgroundColor: Colors.white,
                     child: Icon(Icons.person, size: 55, color: Colors.indigo),
                   ),
-
                   const SizedBox(height: 15),
-
                   const Text(
                     'Your Name',
                     style: TextStyle(
@@ -46,9 +41,7 @@ class ProfilePage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-
                   const SizedBox(height: 5),
-
                   const Text(
                     'StudentHub Developer',
                     style: TextStyle(color: Colors.white70),
@@ -73,7 +66,6 @@ class ProfilePage extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-
                     const SizedBox(height: 15),
 
                     const ListTile(
